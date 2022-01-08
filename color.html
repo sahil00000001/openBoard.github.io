@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        background-color: antiquewhite;
+      }
+      .outer {
+        width: 600px;
+        height: 100px;
+        border-radius: 50%;
+        /* border: 1px solid grey;
+           background-color: black; */
+        display: flex;
+      }
+
+      .red {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: tomato;
+        border: 1px solid grey;
+        margin-left: 40px;
+        margin-top: 120px;
+      }
+      .green {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: green;
+        border: 1px solid grey;
+        margin-left: 40px;
+        margin-top: 120px;
+      }
+      .blue {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: blue;
+        border: 1px solid grey;
+        margin-left: 40px;
+        margin-top: 120px;
+      }
+      body {
+        width: 120px;
+        height: 120px;
+        border-radius: 20%;
+        /* border: 1px solid grey; */
+      }
+      .timepass {
+        border: 1px solid black;
+        width: 400px;
+        height: 100px;
+        margin-top: 100px;
+      }
+    </style>
+
+    <div class="outer">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </div>
+    <div class="timepass"></div>
+    <script>
+      let redcolor = document.querySelector(".red");
+      let box = document.querySelector(".timepass");
+      let bluecolor = document.querySelector(".blue");
+      let greencolor = document.querySelector(".green");
+      redcolor.addEventListener("click", function () {
+        box.style.backgroundColor = "red";
+      });
+      bluecolor.addEventListener("click", function () {
+        box.style.backgroundColor = "blue";
+      });
+      greencolor.addEventListener("click", function () {
+        box.style.backgroundColor = "green";
+      });
+    </script>
+  </body>
+</html>

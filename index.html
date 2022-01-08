@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas example</h1>
+    <canvas></canvas>
+    <script>
+        let bodybv =document.querySelector("body");
+        let canvasBoard= document.querySelector("canvas");
+        // window is entire tab
+        canvasBoard.height= 500;
+        canvasBoard.width=600;
+        //esa isiliye kiya tha kyunki default hiegth and weigth smaller hoti hai.
+        let tool =canvasBoard.getContext("2d");
+        //es code se tool milta jisse further editing hoti hain.
+       tool.fillStyle="red";
+       tool.fillRect(10,20,200,200);
+       tool.strokeStyle="yellow";
+       tool.strokeRect(50,50,200,200);
+       let Sx,Sy,Tx,Ty;
+       bodybv.addEventListener("mousedown",
+       function(e){
+         //  alert("mouse is used");
+        //   console.log(e);
+        Sx=e.clientX;
+        Sy=e.clientY;
+      //  console.log(xPos,yPos);
+       })
+       bodybv.addEventListener("mouseup",function(e){
+           //alert("mouse is lifted");
+          // console.log(e);
+            Tx=e.clientX;
+            Ty=e.clientY;
+           let width=Tx-Sx;
+           let height =Ty-Sy;
+           //console.log(xPos,yPos);
+        tool.strokeRect(Sx,Sy,width,height);
+        tool.strokeStyle="red";
+    })
+    </script>
+</body>
+</html> 
